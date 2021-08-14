@@ -4,12 +4,10 @@ using SimpleWebApi.Model;
 
 namespace NUnitTestProject1
 {
+      
+    
     public class Tests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
 
         [Test]
         public void TestAddFunction()
