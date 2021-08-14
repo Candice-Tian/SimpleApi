@@ -1,4 +1,4 @@
 # SimpleApi
 test
 
-test other branch commit cannot  trigger pipeline
+test other branch commits cannot  trigger pipeline
