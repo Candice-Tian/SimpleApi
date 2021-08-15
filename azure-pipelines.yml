@@ -62,4 +62,10 @@ steps:
     targetPath: '$(Build.ArtifactStagingDirectory)' 
     artifactName: 'SimpleApi'
 
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Pipeline.Workspace)'
+    artifactType: 'pipeline'
+    artifactName: 'PackageWeb'
+
 
