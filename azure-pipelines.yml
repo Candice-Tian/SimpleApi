@@ -3,11 +3,13 @@
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
-# trigger:
-# - master
+trigger:
+  branches:
+   include:
+    - master
 
-pr:
-- master
+# pr:
+# - master
 
 pool:
   vmImage: 'windows-latest'
