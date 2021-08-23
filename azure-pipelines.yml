@@ -68,4 +68,16 @@ steps:
 #     artifactType: 'pipeline'
 #     artifactName: 'PackageWeb'
 
+- task: NuGetCommand@2
+  inputs:
+    command: pack
+    packagesToPack: '**/*.csproj'
 
+- task: NuGetAuthenticate@0
+  displayName: 'NuGet Authenticate'
+- task: NuGetCommand@2
+  displayName: 'NuGet push'
+  inputs:
+    command: push
+    publishVstsFeed: 'SimpleApp/App'
+    allowPackageConflicts: true
